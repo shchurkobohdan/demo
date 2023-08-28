@@ -3,20 +3,20 @@ pipeline {
 
     stages {
         stage("SCM") {
-            step {
+            steps {
                 git 'https://github.com/jglick/simple-maven-project-with-tests.git'
             }
         }
 
         stage("Tests") {
-            step {
+            steps {
                 sh "mvn -Dmaven.test.failure.ignore=true clean test site"
             }
         }
 
         stage("Allure report") {
             script {
-                step {
+                steps {
                     allure([
                         includeProperties: true,
                         jdk: '',

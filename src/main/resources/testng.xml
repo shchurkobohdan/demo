@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TM UI suite">
+    <suite-files>
+        <suite-file path="chromeTest.xml"/>
+        <suite-file path="firefoxTest.xml"/>
+    </suite-files>
+</suite>

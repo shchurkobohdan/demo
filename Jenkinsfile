@@ -14,7 +14,9 @@ pipeline {
 
         stage("Tests") {
             steps {
-                sh "mvn -Dmaven.test.failure.ignore=true clean test site"
+                withMaven {
+                     sh "mvn -Dmaven.test.failure.ignore=true clean test site"
+                }
             }
         }
 

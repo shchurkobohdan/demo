@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'mvn'
+    }
+
     stages {
         stage("SCM") {
             steps {
@@ -10,9 +14,7 @@ pipeline {
 
         stage("Tests") {
             steps {
-                withMaven {
-                     sh "mvn -Dmaven.test.failure.ignore=true clean test site"
-                }
+                sh "mvn -Dmaven.test.failure.ignore=true clean test site"
             }
         }
 

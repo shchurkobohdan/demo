@@ -23,7 +23,7 @@ public class ProductsPage extends Page {
 
     @Step("Add product to cart")
     public void addProductToCart(String name) {
-        var element = getProductElement(name);
+        SelenideElement element = getProductElement(name);
         element.$(By.id("add-to-cart-sauce-labs-backpack")).click();
     }
 

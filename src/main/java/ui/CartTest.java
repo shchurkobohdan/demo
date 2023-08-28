@@ -19,7 +19,7 @@ public class CartTest extends UiTest {
         ProductsPage productsPage = loginPage.login("standard_user", "secret_sauce");
 
         productsPage.addProductToCart("Sauce Labs Backpack");
-        var cartSize = productsPage.getCartItemsNumber();
+        int cartSize = productsPage.getCartItemsNumber();
         assertEquals(cartSize, 1);
 
         productsPage.resetAppState();

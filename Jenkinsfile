@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("SCM") {
             steps {
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                git credentialsId: 'git_ssh', url: 'git@github.com:shchurkobohdan/demo.git'
             }
         }
 

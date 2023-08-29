@@ -17,7 +17,6 @@ pipeline {
         stage("Tests") {
             steps {
                 sh "mvn clean test -DremoteUrl=$REMOTE_URL -Premote"
-                archiveArtifacts artifacts: 'tests.log', allowEmptyArchive: true
             }
         }
 
@@ -32,12 +31,6 @@ pipeline {
                     report: 'target/allure-report'
                 ])
             }
-        }
-    }
-
-    post {
-        cleanup{
-            cleanWs()
         }
     }
 }

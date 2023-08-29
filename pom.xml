@@ -13,9 +13,30 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <aspectj.version>1.9.19</aspectj.version>
-<!--        <baseDir>/Users/bshchurko/IdeaProjects/demo</baseDir>-->
-        <baseDir>/var/jenkins_home/workspace/demo</baseDir>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+            <properties>
+                <baseDir>/Users/bshchurko/IdeaProjects/demo</baseDir>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>remote</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <baseDir>/var/jenkins_home/workspace/demo</baseDir>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>

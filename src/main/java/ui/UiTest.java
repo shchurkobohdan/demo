@@ -14,7 +14,7 @@ public abstract class UiTest {
     @BeforeSuite(description = "Configure Selenide before running tests")
     @Parameters("browser")
     public void setupSelenide(@Optional("firefox") String browser) {
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.remote = "http://172.19.0.1:4444/wd/hub";
         Configuration.baseUrl = "https://www.saucedemo.com";
         Configuration.browser = browser;
         Configuration.reportsFolder = "target/test-results/reports";

@@ -1,5 +1,6 @@
+env.REMOTE_URL = 'http://172.19.0.2:4444/wd/hub'
+
 pipeline {
-    env.REMOTE_URL = 'http://172.19.0.2:4444/wd/hub'
     agent any
 
     tools {

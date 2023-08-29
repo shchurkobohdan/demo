@@ -14,7 +14,7 @@ pipeline {
 
         stage("Tests") {
             steps {
-                sh "mvn -Dmaven.test.failure.ignore=true clean test site"
+                sh "mvn clean test -Dmaven.test.failure.ignore=true -DremoteUrl=http://172.19.0.2:4444/wd/hub -Premote"
             }
         }
 

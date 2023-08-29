@@ -1,4 +1,5 @@
 pipeline {
+    env.REMOTE_URL = 'http://172.19.0.2:4444/wd/hub'
     agent any
 
     tools {
@@ -14,7 +15,7 @@ pipeline {
 
         stage("Tests") {
             steps {
-                sh "mvn clean test -Dmaven.test.failure.ignore=true -DremoteUrl=http://172.19.0.2:4444/wd/hub -Premote"
+                sh "mvn clean test -Dmaven.test.failure.ignore=true -DremoteUrl=$REMOTE_URL -Premote"
             }
         }
 

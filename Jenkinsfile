@@ -16,7 +16,7 @@ pipeline {
 
         stage("Tests") {
             steps {
-                sh "mvn clean test -Dmaven.test.failure.ignore=true -DremoteUrl=$REMOTE_URL -Premote"
+                sh "mvn clean test -DremoteUrl=$REMOTE_URL -Premote"
             }
         }
 

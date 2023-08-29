@@ -16,7 +16,6 @@ public abstract class UiTest {
     public void setupSelenide(@Optional("firefox") String browser) {
         String remoteUrl = System.getProperty("remoteUrl");
         if (remoteUrl != null) {
-            System.out.println(remoteUrl);
             Configuration.remote = remoteUrl;
         }
         Configuration.baseUrl = "https://www.saucedemo.com";

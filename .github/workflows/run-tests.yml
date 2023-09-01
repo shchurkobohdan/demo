@@ -13,7 +13,7 @@ jobs:
        uses: actions/setup-java@v2
        with:
         java-version: '11'
-        distribution: 'oracle'
+        distribution: 'adopt'
 
      - name: Run tests
        run: mvn clean test -DxmlFile=api/apiTests.xml

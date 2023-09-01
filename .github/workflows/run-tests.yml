@@ -15,7 +15,7 @@ jobs:
         java-version: '8'
 
      - name: Run tests
-     - uses: mvn clean test -DxmlFile=api/apiTests.xml
+     - run: mvn clean test -DxmlFile=api/apiTests.xml
      - continue-on-error: true
 
      - name: Generate Allure report

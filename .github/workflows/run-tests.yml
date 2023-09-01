@@ -2,6 +2,10 @@ name: Run API tests
 
 on: push
 
+permissions:
+  actions: write
+  pages: write
+
 jobs:
  build:
    runs-on: ubuntu-latest

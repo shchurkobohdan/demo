@@ -54,6 +54,6 @@ public class BookingTest {
     @Test
     public void testDeleteBooking() {
         Response response = bookerClient.deleteBooking(token, bookingId);
-        assertEquals(response.status(), 201);
+        assertEquals(response.status(), 200);
     }
 }

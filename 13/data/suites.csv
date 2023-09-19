@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Sep 19 13:51:47 GMT 2023","Tue Sep 19 13:51:47 GMT 2023","80","Restful Booker Herokuapp API tests","API tests","api.BookingTest","api.BookingTest","testUpdateBooking","testUpdateBooking",""
+"passed","Tue Sep 19 13:51:46 GMT 2023","Tue Sep 19 13:51:47 GMT 2023","175","Restful Booker Herokuapp API tests","API tests","api.BookingTest","api.BookingTest","testCreateBooking","testCreateBooking",""
+"failed","Tue Sep 19 13:51:47 GMT 2023","Tue Sep 19 13:51:47 GMT 2023","89","Restful Booker Herokuapp API tests","API tests","api.BookingTest","api.BookingTest","testDeleteBooking","testDeleteBooking",""
+"passed","Tue Sep 19 13:51:47 GMT 2023","Tue Sep 19 13:51:47 GMT 2023","77","Restful Booker Herokuapp API tests","API tests","api.BookingTest","api.BookingTest","testGetBooking","testGetBooking",""
